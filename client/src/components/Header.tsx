@@ -86,6 +86,12 @@ const Header = () => {
                 {item}
               </a>
             ))}
+            <a
+              href="#book-call"
+              className="text-sm tracking-wide px-4 py-2 ml-2 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors"
+            >
+              Book a Call
+            </a>
           </nav>
           
           <div className="flex items-center space-x-3">
@@ -131,6 +137,13 @@ const Header = () => {
               {item}
             </a>
           ))}
+          <a
+            href="#book-call"
+            className="text-white dark:text-white light:text-white text-sm py-3 px-3 bg-primary hover:bg-primary/90 rounded-md transition-colors mt-2"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Book a Call
+          </a>
         </nav>
         
         <div className="flex justify-between items-center mt-6 pt-6 border-t border-zinc-800 dark:border-zinc-800 light:border-gray-200 text-zinc-400 dark:text-zinc-400 light:text-gray-500">
