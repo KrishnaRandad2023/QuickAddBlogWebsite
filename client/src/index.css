@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+Pro:wght@400;600;700&family=Fira+Sans:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +10,59 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-serif antialiased bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+@layer components {
+  .newspaper-heading {
+    @apply font-display font-bold uppercase border-b-2 border-primary pb-2 mb-6;
+  }
+
+  .newspaper-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight;
+  }
+
+  .newspaper-subtitle {
+    @apply text-lg md:text-xl font-serif italic;
+  }
+
+  .column-layout {
+    @apply columns-1 md:columns-2 lg:columns-3 gap-6;
+  }
+
+  .dropcap::first-letter {
+    @apply font-display text-5xl font-bold float-left mr-2 mt-0 text-primary;
+    line-height: 0.7;
+  }
+
+  .vintage-border {
+    @apply border-2 border-dotted border-primary/70 p-4;
+  }
+
+  .radio-vintage-button {
+    @apply px-5 py-2 bg-amber-100 border border-amber-600 text-amber-900 font-medium rounded-sm shadow hover:bg-amber-200 transition-all duration-200;
+  }
+
+  .news-card {
+    @apply bg-white border border-gray-200 p-4 mb-4 hover:shadow-md transition-shadow;
+  }
+
+  /* Newspaper-style column dividers */
+  .news-divider {
+    @apply hidden md:block w-px h-full bg-gray-300 mx-4;
+  }
+
+  /* Radio-style controls */
+  .radio-dial {
+    @apply w-12 h-12 rounded-full bg-slate-800 border-4 border-slate-600 flex items-center justify-center text-white cursor-pointer hover:shadow-lg hover:border-primary transition-all;
+  }
+  
+  .newspaper-grid {
+    @apply grid grid-cols-1 md:grid-cols-12 gap-6;
   }
 }
