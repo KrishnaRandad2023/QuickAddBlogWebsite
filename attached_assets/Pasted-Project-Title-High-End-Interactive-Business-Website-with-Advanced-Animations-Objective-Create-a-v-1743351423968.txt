@@ -1,0 +1,81 @@
+Project Title: High-End Interactive Business Website with Advanced Animations
+
+Objective:
+Create a visually stunning, interactive, and high-quality business website with smooth animations, dynamic transitions, and engaging interactive elements. The website should effectively advertise the company’s products/services while ensuring an immersive user experience. It should be aesthetically appealing, responsive, and functionally rich to captivate visitors and convert them into customers.
+
+Key Features & Requirements:
+1. Aesthetic and Design Requirements:
+Modern, sleek, and high-end design with a premium feel.
+
+Advanced animations and transitions using GSAP, Three.js, or Lottie animations.
+
+Parallax scrolling effects for depth and engagement.
+
+Micro-interactions on hover, click, and scroll to enhance interactivity.
+
+High-resolution images and videos related to our products and services.
+
+Consistent branding with a well-defined color scheme, typography, and visual hierarchy.
+
+Dark mode and light mode toggle for user preference.
+
+2. Homepage Features:
+Visually engaging hero section with an animated product showcase.
+
+Dynamic text animations for an impactful brand introduction.
+
+Call-to-action buttons that trigger smooth animated responses.
+
+Background video loop or dynamic particles animation for an engaging atmosphere.
+
+Customer testimonials carousel with smooth sliding animations.
+
+Live statistics counter displaying business achievements dynamically.
+
+3. Product/Services Showcase:
+Interactive 3D models of products (if applicable) using Three.js.
+
+Before-and-after comparison sliders for demonstrating product effectiveness.
+
+Hover-triggered animations to showcase features dynamically.
+
+Filter and sort functionality for easy product discovery.
+
+Zoom-in feature on product images with smooth animations.
+
+Embedded product demonstration videos.
+
+4. "Connect With Us" Section:
+Contact form with live validation and interactive UI.
+
+Integrated Google Maps API for location display with animated markers.
+
+Clickable social media icons with hover effects.
+
+Live chat functionality using AI-powered chatbots or customer support integration.
+
+Click-to-call button for instant customer engagement.
+
+5. Additional Business Features:
+Blog or news section with animated post previews.
+
+FAQ section with accordion-style animations.
+
+Subscription/Newsletter signup with smooth form interactions.
+
+Customer reviews with star ratings and sliding effects.
+
+Case studies/Portfolio showcase with animated transitions.
+
+Event countdown timer for upcoming promotions.
+
+6. Interactive Functionalities:
+Smooth scrolling with inertia effects.
+
+Lazy loading of images and assets for performance optimization.
+
+Interactive hover effects on buttons and links.
+
+AI-driven personalized recommendations based on user behavior.
+
+Gamified elements like spinning wheels, scratch cards for promotions.
