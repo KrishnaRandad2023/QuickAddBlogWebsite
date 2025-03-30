@@ -1,0 +1,91 @@
+### **Prompt 1: Ultra-Engaging, Newspaper-Themed Advertising Website with Social Media & Interactive Features**  
+
+**Objective:**  
+Develop a **highly interactive, visually stunning, and ultra-modern** business website with a **newspaper-style background theme** that embodies the power of **social media, radio, and other advertising modes**. The website should be packed with immersive animations, dynamic storytelling, and interactive elements that make users feel like they are engaging with a **live, evolving digital media space**.  
+
+---  
+
+### **Core Concept & Theme:**  
+- The entire website should **replicate a high-quality digital newspaper**, blending elements of **traditional media (newspapers, radio, TV ads, billboards)** with modern **social media advertising** aesthetics.  
+- Every section should feel like a **different advertising medium**, giving users a **multi-dimensional marketing experience**.  
+- The design should be **visually dynamic, yet structured**, making it **highly immersive, yet easy to navigate**.  
+- **Real-time interactions** should make the website feel like a living, breathing digital marketing hub.  
+
+---  
+
+### **Design & Aesthetic Features:**  
+
+#### **1. Background & Theme: "The Ultimate Digital Newsroom"**  
+- The entire website background should **mimic a digital newspaper**, with **subtle, animated headlines scrolling** in the background.  
+- Different sections should resemble **social media feeds, radio broadcast waves, TV static effects, and billboard-style layouts**.  
+- A unique **paper fold/unfold animation** when navigating between sections to simulate turning pages.  
+- **Parallax scrolling** to create depth and movement, enhancing the storytelling aspect.  
+- **Flickering neon effect on headlines**, like classic **Times Square advertisements**.  
+
+#### **2. Light & Dark Mode:**  
+- **Light Mode:** A crisp, classic newspaper feel with a black-and-white aesthetic, **sepia-toned paper background**, and **bold headlines with a vintage touch**.  
+- **Dark Mode:** A futuristic **social media-inspired dark theme**, with neon elements, **glowing social media buttons**, and interactive highlights that resemble **modern advertising billboards**.  
+
+#### **3. Social Media & Advertising-Inspired UI Elements:**  
+- **Social Media Feed Effect:** A timeline-like section where users can scroll through **posts, ads, video snippets, and user-generated content**.  
+- **News Ticker:** A classic moving **headline ticker** at the top, updating with business announcements, trending ads, and promotions.  
+- **Live Digital Billboard:** A **dynamic slider section** where advertisements change in real time, similar to a busy cityscape.  
+- **Radio Wave Effect:** When users hover over audio elements, **sound waves appear visually** to mimic the feel of an FM radio transmission.  
+- **TV Static Transitions:** Page transitions should feature a subtle **retro TV static effect**, reminiscent of **channel switching in old TVs**.  
+- **Podcast/Audio Ad Section:** Users can **click play** to hear business messages in a **radio-style broadcast format**, complete with vintage microphone visuals.  
+
+#### **4. Dynamic Interactions & Animations:**  
+- **Hover Effects:** Every **headline, button, or image** should react when hovered over—either **glowing, shifting, or distorting slightly** to enhance interactivity.  
+- **3D Scroll Effects:** A **tilt effect** that moves UI elements slightly as the user scrolls, giving the page a layered effect.  
+- **Gamification Elements:** Users can **click on interactive ads** to "unlock deals," like **scratch-to-reveal promotions**.  
+- **Live Engagement Features:** Users can **"like," "share," or "comment"** on featured content, making it feel like an actual **social media ad campaign**.  
+- **AI-Powered Interactive Chatbot:** A **news anchor-style AI chatbot** that dynamically updates users about products, promotions, and industry news.  
+
+---
+
+### **Key Sections & Functionalities:**  
+
+#### **1. Hero Section: The Ultimate Advertising Hub**  
+- A **huge, high-impact animated ad banner** that showcases product promotions.  
+- The **background should dynamically shift** between different **advertising styles** (TV commercial, radio wave, social media, newspaper).  
+- **Scrolling text effects** to simulate **real-time news updates** about the company.  
+
+#### **2. Social Media & Ad Campaign Feed**  
+- A **carousel of animated advertisements** styled as a **live social media feed**.  
+- Users can **scroll through different ad types** (video, static, GIF-based, interactive).  
+- The section should feel like **Twitter/X, Instagram, and Facebook merged into a sleek business showcase**.  
+
+#### **3. Connect With Us - "Live Advertising Desk"**  
+- An **animated newspaper editor desk theme**, where users can **submit inquiries via a typewriter-style contact form**.  
+- **Clickable icons** for instant connection via **WhatsApp, Telegram, and Email**.  
+- **Live chat support with a retro radio broadcast effect**.  
+
+#### **4. "Advertise With Us" - A Futuristic Business Portal**  
+- A **pitch-your-ad section**, where businesses can submit **their advertising ideas** through an interactive form.  
+- **AI-powered ad generator**, allowing businesses to preview their ad placement in **real-time on mockup billboards, newspapers, and digital feeds**.  
+- **Business testimonials styled as TV interviews**, featuring recorded customer experiences.  
+
+#### **5. AI-Driven Ad Insights & Analytics Section**  
+- An **interactive dashboard** that displays live **advertising engagement statistics**.  
+- A **"Trending Now" panel**, showcasing the most **popular products, ads, and campaigns**.  
+- **Personalized advertising recommendations**, dynamically generated based on user interactions.  
+
+---
+
+### **Technical Features:**  
+
+- **Built with Next.js or React.js** for a **smooth, high-performance experience**.  
+- **GSAP & Three.js-powered animations** for dynamic effects.  
+- **Real-time updates** using Firebase or WebSockets for live user engagement.  
+- **SEO-optimized content** for strong online visibility.  
+- **PWA compatibility** for offline functionality.  
+- **Fully mobile-responsive with gesture-based interactions**.  
+
+---
+
+### **Final Experience & Feel:**  
+This website should feel like a **digital revolution in advertising**—a hybrid of **traditional marketing nostalgia and futuristic engagement**. It should **immerse visitors in a high-tech advertising experience**, making them feel like they’re inside a **virtual marketing control room**.  
+
+---
+
+Would you like additional gamification elements or AI-powered interactive sections? 🚀

@@ -3,6 +3,8 @@ import {
   contactSubmissions, type ContactSubmission, type InsertContact,
   newsletterSubscriptions, type NewsletterSubscription, type InsertNewsletter
 } from "@shared/schema";
+import { db } from "./db";
+import { eq } from "drizzle-orm";
 
 export interface IStorage {
   // User methods
@@ -21,84 +23,63 @@ export interface IStorage {
   updateNewsletterSubscription(id: number, updates: Partial<NewsletterSubscription>): Promise<NewsletterSubscription>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<number, User>;
-  private contactSubmissions: Map<number, ContactSubmission>;
-  private newsletterSubscriptions: Map<number, NewsletterSubscription>;
-  private userCurrentId: number;
-  private contactCurrentId: number;
-  private newsletterCurrentId: number;
-
-  constructor() {
-    this.users = new Map();
-    this.contactSubmissions = new Map();
-    this.newsletterSubscriptions = new Map();
-    this.userCurrentId = 1;
-    this.contactCurrentId = 1;
-    this.newsletterCurrentId = 1;
-  }
-
+export class DatabaseStorage implements IStorage {
   // User methods
   async getUser(id: number): Promise<User | undefined> {
-    return this.users.get(id);
+    const [user] = await db.select().from(users).where(eq(users.id, id));
+    return user;
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
+    const [user] = await db.select().from(users).where(eq(users.username, username));
+    return user;
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const id = this.userCurrentId++;
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
+    const [user] = await db.insert(users).values(insertUser).returning();
     return user;
   }
   
   // Contact form methods
   async createContactSubmission(insertContact: InsertContact): Promise<ContactSubmission> {
-    const id = this.contactCurrentId++;
-    const createdAt = new Date();
-    const contact: ContactSubmission = { ...insertContact, id, createdAt };
-    this.contactSubmissions.set(id, contact);
-    return contact;
+    const [submission] = await db.insert(contactSubmissions).values(insertContact).returning();
+    return submission;
   }
   
   async getContactSubmission(id: number): Promise<ContactSubmission | undefined> {
-    return this.contactSubmissions.get(id);
+    const [submission] = await db.select().from(contactSubmissions).where(eq(contactSubmissions.id, id));
+    return submission;
   }
   
   // Newsletter methods
   async createNewsletterSubscription(insertNewsletter: InsertNewsletter): Promise<NewsletterSubscription> {
-    const id = this.newsletterCurrentId++;
-    const createdAt = new Date();
-    const active = true;
-    const subscription: NewsletterSubscription = { ...insertNewsletter, id, createdAt, active };
-    this.newsletterSubscriptions.set(id, subscription);
+    const [subscription] = await db.insert(newsletterSubscriptions).values(insertNewsletter).returning();
     return subscription;
   }
   
   async getNewsletterSubscription(id: number): Promise<NewsletterSubscription | undefined> {
-    return this.newsletterSubscriptions.get(id);
+    const [subscription] = await db.select().from(newsletterSubscriptions).where(eq(newsletterSubscriptions.id, id));
+    return subscription;
   }
   
   async getNewsletterSubscriptionByEmail(email: string): Promise<NewsletterSubscription | undefined> {
-    return Array.from(this.newsletterSubscriptions.values()).find(
-      (subscription) => subscription.email === email,
-    );
+    const [subscription] = await db.select().from(newsletterSubscriptions).where(eq(newsletterSubscriptions.email, email));
+    return subscription;
   }
   
   async updateNewsletterSubscription(id: number, updates: Partial<NewsletterSubscription>): Promise<NewsletterSubscription> {
-    const subscription = this.newsletterSubscriptions.get(id);
+    const [subscription] = await db
+      .update(newsletterSubscriptions)
+      .set(updates)
+      .where(eq(newsletterSubscriptions.id, id))
+      .returning();
+      
     if (!subscription) {
       throw new Error(`Newsletter subscription with ID ${id} not found`);
     }
     
-    const updatedSubscription = { ...subscription, ...updates };
-    this.newsletterSubscriptions.set(id, updatedSubscription);
-    return updatedSubscription;
+    return subscription;
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();
