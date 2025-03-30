@@ -1,0 +1,29 @@
+Prompt 1: Ultra-Engaging, Newspaper-Themed Advertising Website with Social Media & Interactive Features
+Objective:
+Develop a highly interactive, visually stunning, and ultra-modern business website with a newspaper-style background theme that embodies the power of social media, radio, and other advertising modes. The website should be packed with immersive animations, dynamic storytelling, and interactive elements that make users feel like they are engaging with a live, evolving digital media space.
+
+Core Concept & Theme:
+The entire website should replicate a high-quality digital newspaper, blending elements of traditional media (newspapers, radio, TV ads, billboards) with modern social media advertising aesthetics.
+
+Every section should feel like a different advertising medium, giving users a multi-dimensional marketing experience.
+
+The design should be visually dynamic, yet structured, making it highly immersive, yet easy to navigate.
+
+Real-time interactions should make the website feel like a living, breathing digital marketing hub.
+
+Design & Aesthetic Features:
+1. Background & Theme: "The Ultimate Digital Newsroom"
+The entire website background should mimic a digital newspaper, with subtle, animated headlines scrolling in the background.
+
+Different sections should resemble social media feeds, radio broadcast waves, TV static effects, and billboard-style layouts.
+
+A unique paper fold/unfold animation when navigating between sections to simulate turning pages.
+
+Parallax scrolling to create depth and movement, enhancing the storytelling aspect.
+
+Flickering neon effect on headlines, like classic Times Square advertisements.
+
+2. Light & Dark Mode:
+Light Mode: A crisp, classic newspaper feel with a black-and-white aesthetic, sepia-toned paper background, and bold headlines with a vintage touch.
+
+Dark Mode: A futuristic social media-inspired dark theme, with neon elements, glowing social media buttons, and interactive highlights that resemble modern advertising billboards.

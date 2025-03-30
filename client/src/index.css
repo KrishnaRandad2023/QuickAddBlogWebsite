@@ -4,6 +4,57 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Static TV effect */
+.bg-tv-static {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-size: cover;
+  mix-blend-mode: overlay;
+}
+
+/* Flickering text animation */
+@keyframes flicker {
+  0% { opacity: 0.8; }
+  5% { opacity: 1; }
+  10% { opacity: 0.85; }
+  15% { opacity: 0.9; }
+  20% { opacity: 1; }
+  25% { opacity: 0.95; }
+  30% { opacity: 0.8; }
+  35% { opacity: 0.9; }
+  40% { opacity: 1; }
+  45% { opacity: 0.95; }
+  50% { opacity: 0.8; }
+  55% { opacity: 0.85; }
+  60% { opacity: 0.9; }
+  65% { opacity: 1; }
+  70% { opacity: 0.95; }
+  75% { opacity: 0.9; }
+  80% { opacity: 1; }
+  85% { opacity: 0.95; }
+  90% { opacity: 0.8; }
+  95% { opacity: 0.85; }
+  100% { opacity: 0.9; }
+}
+
+.flicker-text {
+  animation: flicker 4s infinite;
+}
+
+.tv-static-overlay {
+  mix-blend-mode: overlay;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover glow effect for interactive elements */
+.interactive-hover {
+  transition: all 0.3s ease;
+}
+
+.interactive-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
 @layer base {
   * {
     @apply border-border;
