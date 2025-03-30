@@ -19,6 +19,7 @@ import SocialMediaFeed from "@/components/SocialMediaFeed";
 import DigitalBillboard from "@/components/DigitalBillboard";
 import RadioAd from "@/components/RadioAd";
 import PortfolioSection from "@/components/PortfolioSection";
+import BookCallSection from "@/components/BookCallSection";
 
 // Sample news headlines for ticker
 const headlines = [
@@ -141,6 +142,10 @@ const Home = () => {
         </div>
         
         <TestimonialsSection />
+        
+        {/* Book Call section */}
+        <BookCallSection />
+        
         <FaqSection />
         <ContactSection />
         <NewsletterSection />
