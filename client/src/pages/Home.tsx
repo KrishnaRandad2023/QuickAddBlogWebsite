@@ -38,10 +38,11 @@ const Home = () => {
     
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
+      anchor.addEventListener('click', (e: Event) => {
         e.preventDefault();
         
-        const href = (this as HTMLAnchorElement).getAttribute('href');
+        const anchorElement = e.currentTarget as HTMLAnchorElement;
+        const href = anchorElement.getAttribute('href');
         if (!href) return;
         
         const target = document.querySelector(href);
@@ -64,8 +65,9 @@ const Home = () => {
 
       // Add event listener for internal links
       document.querySelectorAll('a:not([href^="http"])').forEach(link => {
-        link.addEventListener('click', function() {
-          const href = (this as HTMLAnchorElement).getAttribute('href');
+        link.addEventListener('click', (e: Event) => {
+          const linkElement = e.currentTarget as HTMLAnchorElement;
+          const href = linkElement.getAttribute('href');
           if (!href || href.startsWith('#')) return; // Skip anchor links
           
           // Show static effect
