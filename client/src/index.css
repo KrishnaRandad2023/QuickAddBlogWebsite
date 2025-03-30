@@ -77,11 +77,30 @@
   }
 
   body {
-    @apply font-serif antialiased bg-background text-foreground;
+    @apply font-serif antialiased bg-background text-foreground transition-colors duration-200;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-display font-bold;
+  }
+  
+  /* Common UI elements dark/light mode support */
+  .light .btn-primary {
+    @apply bg-indigo-500 text-white hover:bg-indigo-600;
+  }
+  
+  .dark .btn-primary {
+    @apply bg-indigo-600 text-white hover:bg-indigo-700;
+  }
+  
+  /* Card styles with theme support */
+  .card {
+    @apply bg-card text-card-foreground shadow-sm;
+  }
+  
+  /* Section backgrounds */
+  .section-alt {
+    @apply bg-muted;
   }
 }
 
@@ -116,17 +135,33 @@
   }
 
   .news-card {
-    @apply bg-white border border-gray-200 p-4 mb-4 hover:shadow-md transition-shadow;
+    @apply bg-card border border-border p-4 mb-4 hover:shadow-md transition-shadow;
   }
 
   /* Newspaper-style column dividers */
   .news-divider {
-    @apply hidden md:block w-px h-full bg-gray-300 mx-4;
+    @apply hidden md:block w-px h-full mx-4;
+  }
+  
+  .dark .news-divider {
+    @apply bg-zinc-700;
+  }
+  
+  .light .news-divider {
+    @apply bg-gray-300;
   }
 
   /* Radio-style controls */
   .radio-dial {
-    @apply w-12 h-12 rounded-full bg-slate-800 border-4 border-slate-600 flex items-center justify-center text-white cursor-pointer hover:shadow-lg hover:border-primary transition-all;
+    @apply w-12 h-12 rounded-full border-4 flex items-center justify-center cursor-pointer hover:shadow-lg hover:border-primary transition-all;
+  }
+  
+  .dark .radio-dial {
+    @apply bg-slate-800 border-slate-600 text-white;
+  }
+  
+  .light .radio-dial {
+    @apply bg-slate-700 border-slate-500 text-white;
   }
   
   .newspaper-grid {
