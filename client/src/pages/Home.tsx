@@ -18,6 +18,7 @@ import FilmReel from "@/components/FilmReel";
 import SocialMediaFeed from "@/components/SocialMediaFeed";
 import DigitalBillboard from "@/components/DigitalBillboard";
 import RadioAd from "@/components/RadioAd";
+import PortfolioSection from "@/components/PortfolioSection";
 
 // Sample news headlines for ticker
 const headlines = [
@@ -114,6 +115,9 @@ const Home = () => {
         </div>
         
         <FeaturesSection />
+        
+        {/* Portfolio section */}
+        <PortfolioSection />
         
         {/* Social Media Feed section */}
         <div className="bg-zinc-50 dark:bg-zinc-950 py-8">
