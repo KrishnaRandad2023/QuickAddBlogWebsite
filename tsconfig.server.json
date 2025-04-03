@@ -1,17 +1,10 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist/server",
-    "rootDir": ".", // Changed from "./server" to include all necessary files
     "module": "ESNext",
-    "target": "ES2020",
-    "strict": true,
-    "moduleResolution": "node",
-    "paths": {
-      "@/*": ["./client/src/*"],
-      "@shared/*": ["./shared/*"]
-    }
+    "moduleResolution": "Node",
+    "outDir": "dist",
+    "noEmit": false
   },
-  "include": ["server/**/*", "shared/**/*"],
-  "exclude": ["node_modules", "client/src/**/*", "dist"]
+  "include": ["server/**/*"]
 }
