@@ -2,6 +2,8 @@ import { pgTable, text, serial, integer, boolean, timestamp } from "drizzle-orm/
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
+
+
 // Users table (keep existing)
 export const users = pgTable("users", {
   id: serial("id").primaryKey(),
@@ -51,3 +53,31 @@ export const insertNewsletterSchema = createInsertSchema(newsletterSubscriptions
 
 export type InsertNewsletter = z.infer<typeof insertNewsletterSchema>;
 export type NewsletterSubscription = typeof newsletterSubscriptions.$inferSelect;
+
+export const callBookings = pgTable("call_bookings", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  email: text("email").notNull(),
+  company: text("company"),
+  phone: text("phone"),
+  notes: text("notes"),
+  date: text("date").notNull(), // use ISO string or formatted date
+  time: text("time").notNull(),
+  consultationType: text("consultation_type").notNull(),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
+export const insertCallBookingSchema = createInsertSchema(callBookings).pick({
+  name: true,
+  email: true,
+  company: true,
+  phone: true,
+  notes: true,
+  date: true,
+  time: true,
+  consultationType: true,
+});
+
+export type InsertCallBooking = z.infer<typeof insertCallBookingSchema>;
+export type CallBooking = typeof callBookings.$inferSelect;
+

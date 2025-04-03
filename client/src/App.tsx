@@ -3,13 +3,21 @@ import { Switch, Route } from "wouter";
 import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
+import AdminMessagesPage from "@/pages/admin/messages";
+import AdminLogin from "@/pages/admin/login"; // ✅ Import login page
 import { ThemeProvider } from "./lib/themeUtils";
+import NewsletterAdminPage from "@/pages/admin/newsletter";
+import AdminBookingsPage from "@/pages/admin/bookings";
 
 function Router() {
-  return (
+  return ( // ✅ Added return statement
     <Switch>
       <Route path="/" component={Home} />
-      <Route component={NotFound} />
+      <Route path="/admin/messages" component={AdminMessagesPage} />
+      <Route path="/admin/login" component={AdminLogin} />
+      <Route path="/admin/newsletter" component={NewsletterAdminPage} /> {/* ✅ Move up */}
+      <Route path="/admin/bookings" component={AdminBookingsPage} />
+      <Route component={NotFound} /> {/* Always keep this at the bottom */}
     </Switch>
   );
 }
@@ -18,7 +26,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading to ensure GSAP and other resources are loaded
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);

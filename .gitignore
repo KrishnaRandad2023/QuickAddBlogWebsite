@@ -1,6 +1,27 @@
-node_modules
-dist
+# Node dependencies
+node_modules/
+
+# Build output
+dist/
+server/public/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+*.env.*
+
+# macOS system files
 .DS_Store
-server/public
+
+# Package manager lock files (keep only the one you use)
+pnpm-lock.yaml
+yarn.lock
+
+# Vite config (if dynamically generated)
 vite.config.ts.*
+
+# Archives
 *.tar.gz

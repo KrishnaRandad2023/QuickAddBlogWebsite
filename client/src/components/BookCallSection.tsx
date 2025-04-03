@@ -76,33 +76,55 @@ const BookCallSection: React.FC = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+  
     if (!selectedDate || !selectedTime || !formData.name || !formData.email) {
       toast({
         title: "Missing Information",
         description: "Please fill all required fields to proceed.",
-        variant: "destructive"
+        variant: "destructive",
       });
       return;
     }
-    
+  
     setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
+  
+    const payload = {
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      phone: formData.phone,
+      notes: formData.notes,
+      date: format(selectedDate, "yyyy-MM-dd"),
+      time: selectedTime,
+      consultationType,
+    };
+  
+    try {
+      const res = await fetch("/api/book-call", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+  
+      if (!res.ok) {
+        throw new Error("Failed to book call");
+      }
+  
       setIsSubmitting(false);
       setIsSubmitted(true);
-      
-      // Display success toast
+  
       toast({
         title: "Consultation Booked!",
-        description: `Your ${getConsultationTitle()} is scheduled for ${format(selectedDate, 'PPPP')} at ${selectedTime}.`,
-        variant: "default"
+        description: `Your ${getConsultationTitle()} is scheduled for ${format(
+          selectedDate,
+          "PPPP"
+        )} at ${selectedTime}.`,
       });
-      
-      // Reset form after 3 seconds
+  
       setTimeout(() => {
         setIsSubmitted(false);
         setIsOpen(false);
@@ -114,12 +136,20 @@ const BookCallSection: React.FC = () => {
           email: "",
           company: "",
           phone: "",
-          notes: ""
+          notes: "",
         });
       }, 3000);
-    }, 1500);
+    } catch (error) {
+      console.error("Booking error:", error);
+      setIsSubmitting(false);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    }
   };
-
+  
   // Get consultation type title
   const getConsultationTitle = () => {
     const found = consultationTypes.find(type => type.id === consultationType);

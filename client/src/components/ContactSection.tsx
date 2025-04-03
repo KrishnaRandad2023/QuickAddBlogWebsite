@@ -117,7 +117,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-montserrat font-semibold mb-1">Email</h4>
-                  <p className="opacity-80">info@quickadd.com</p>
+                  <p className="opacity-80">quickadd2020@gmail.com</p>
                 </div>
               </div>
 
@@ -128,10 +128,10 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-montserrat font-semibold mb-1">Phone</h4>
                   <a
-                    href="tel:+912345678900"
+                    href="tel:+919823072929"
                     className="opacity-80 hover:text-primary transition-colors"
                   >
-                    +91 234 567 8900
+                    +91 9823072929
                   </a>
                 </div>
               </div>

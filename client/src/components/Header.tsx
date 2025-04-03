@@ -38,7 +38,7 @@ const Header = () => {
         <div className="container mx-auto flex justify-between items-center text-xs px-4">
           <div>{currentDate}</div>
           <div className="flex items-center space-x-4">
-            <span>Established 2005</span>
+            <span>Established 1981</span>
             <span>|</span>
             <span className="text-indigo-200 dark:text-indigo-200 light:text-indigo-100">Premium Advertising</span>
           </div>

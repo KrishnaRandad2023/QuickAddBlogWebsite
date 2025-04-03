@@ -64,32 +64,32 @@ const Footer = () => {
             <h5 className="font-montserrat font-semibold text-lg mb-6">Services</h5>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a  className="hover:text-primary transition-colors">
                   Print Media Branding
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a  className="hover:text-primary transition-colors">
                   Television Advertising
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a  className="hover:text-primary transition-colors">
                   Digital Branding
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a  className="hover:text-primary transition-colors">
                   Radio Advertising
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a  className="hover:text-primary transition-colors">
                   Outdoor Advertising
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a  className="hover:text-primary transition-colors">
                   Corporate Events
                 </a>
               </li>
@@ -97,38 +97,30 @@ const Footer = () => {
           </div>
 
           <div>
-            <h5 className="font-montserrat font-semibold text-lg mb-6">Quick Links</h5>
+            <h5 className="font-montserrat font-semibold text-lg mb-6">Our Team</h5>
             <ul className="space-y-3">
               <li>
-                <a href="#about" className="hover:text-primary transition-colors">
-                  About Us
+                <a  className="hover:text-primary transition-colors">
+                  Vijaykumar Randad
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Portfolio
+                <a  className="hover:text-primary transition-colors">
+                  Shivam Randad
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Case Studies
+                <a className="hover:text-primary transition-colors">
+                  Shubhnagi Randad
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="hover:text-primary transition-colors">
-                  Testimonials
+                <a  className="hover:text-primary transition-colors">
+                  Krishna Randad
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-primary transition-colors">
-                  Contact
-                </a>
-              </li>
+              
+              
             </ul>
           </div>
 
@@ -141,11 +133,11 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="h-5 w-5 mt-0.5 text-primary" />
-                <span>info@quickadd.com</span>
+                <span>quickadd2020@gmail.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 mt-0.5 text-primary" />
-                <span>+91 234 567 8900</span>
+                <span>+91 9823072929</span>
               </li>
             </ul>
           </div>
