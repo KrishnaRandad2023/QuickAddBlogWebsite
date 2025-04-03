@@ -4,12 +4,16 @@
     {
       "src": "package.json",
       "use": "@vercel/node"
+    },
+    {
+      "src": "client/src/main.tsx",
+      "use": "@vercel/react"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/client/$1"
     }
   ]
 }
