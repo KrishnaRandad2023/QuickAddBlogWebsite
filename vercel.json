@@ -4,16 +4,16 @@
     {
       "src": "package.json",
       "use": "@vercel/node"
+    },
+    {
+      "src": "client/src/main.tsx",
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/client/$1"
     }
   ]
 }
