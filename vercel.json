@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     { "src": "package.json", "use": "@vercel/node" },
-    { "src": "client/src/main.tsx", "use": "@vercel/vite" }
+    { "src": "client/src/main.tsx", "use": "@vercel/static-build" }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "server/index.ts" },
