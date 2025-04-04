@@ -1,13 +1,25 @@
 {
-  "name": "quickaddblogwebsite",
+  "name": "quickaddblogwebsite-client",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "cd QuickAddBlogWebsite/client && npm install && npm run build",
-    "start": "cd QuickAddBlogWebsite/client && npm start",
-    "dev": "cd QuickAddBlogWebsite/client && npm run dev"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "engines": {
-    "node": ">=18.0.0"
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.2.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.1"
   }
 }
